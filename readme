@@ -1,0 +1,12 @@
+I created a new project with a directories structure.
+
+Then I created the angular configuration file .
+
+Defined a home page .
+
+I created a service and configuration object for the service rest
+
+Then I created two controllers ,
+one for the information of the countries and another for the information days.
+
+I used the angular styles and materials not needed for any created styles .
