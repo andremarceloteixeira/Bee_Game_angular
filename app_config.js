@@ -1,19 +1,19 @@
 /* 
  * Config Module.
  */
-var appTesting = angular.module("appTesting", ["ngMaterial", "ngRoute", 
+var beeGame = angular.module("beeGame", ["ngMaterial", "ngRoute", 
      "ngMessages", "ngCookies", "ngFlash", "pascalprecht.translate"]);
 
 var LANG_EN = "en";
 
-appTesting.config(function ($routeProvider, $locationProvider, $mdThemingProvider, $mdIconProvider, $translateProvider) {
+beeGame.config(function ($routeProvider, $locationProvider, $mdThemingProvider, $mdIconProvider, $translateProvider) {
     $routeProvider
-            .when(CONFIGURATION.ROUTES.HOME.PATH, {
-                templateUrl: CONFIGURATION.ROUTES.HOME.TEMPLATE,
-                controller: CONFIGURATION.ROUTES.HOME.CONTROLLER
+            .when("/", {
+                templateUrl: "views/home.html",
+                controller: "homeController"
             })
             .otherwise({
-                redirectTo: CONFIGURATION.ROUTES.HOME.PATH
+                redirectTo: "/"
             });
 
     $mdThemingProvider.theme("primary")

@@ -1,24 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="appTesting">
+<html lang="en" ng-app="beeGame">
     <head id="head">
         <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-8">
         <!--Plugins-->
-        <script>
-            var CONFIGURATION = {
-                WEBSERVICE_PATH: "http://api.openweathermap.org/data/2.5/",
-                
-                API_KEY: "69b18809d74f17311fffd6c0973a7396",
-                CITIES: ["London", "Lisbon", "Paris", "Madrid", "Berlin"],
-                ROUTES: {
-                    HOME: {
-                        PATH: "/",
-                        TEMPLATE: "views/home.html",
-                        CONTROLLER: "homeController"
-                    }
-                }
-            };
 
-        </script>
         <script src="./assets/libs/angular.min.js"></script>
         <script src="./assets/libs/angular-animate.min.js"></script>
         <script src="./assets/libs/angular-aria.min.js"></script>
@@ -53,7 +38,6 @@
             <script src="services/service.js"></script>
             <script src="directives//loading_directive.js"></script>
             <script src="controllers/home_controller.js"></script>
-            <script src="controllers/more_controller.js"></script>
         </footer>
     </body>
 </html>

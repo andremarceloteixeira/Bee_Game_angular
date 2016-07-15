@@ -1,5 +1,5 @@
 ﻿var languageEN = {
-    HEAD_TITLE: "App test",
-    HEAD_TITLE_HOME : "Open Weather Data API",
+    HEAD_TITLE: "Angular JS Bee Game",
+    HEAD_TITLE_HOME : "Angular JS Bee Game",
     ERROR_OCCURRED_CITY : "Error get data : "
 };

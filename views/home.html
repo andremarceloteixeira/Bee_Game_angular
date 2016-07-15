@@ -8,26 +8,25 @@
 <div layout="column" flex layout-fill ng-cloak class="content-margin" >
     <flash-message duration="5000" show-close="true" on-dismiss="myCallback(flash)" ></flash-message>
     <md-content  flex-sm md-theme="primary" >
-        <section >
-            <md-list layout-padding>
-                <md-list-item class="md-3-line" ng-repeat="item in cities">
-                    <div class="md-list-item-text">
-                        <div layout="row" layout-align="space-between center">
-                            <div>
-                                <h3>City Name : {{item.cityName}}</h3>
-                                <h4> Average Temperature :  {{item.averageTemperature}} C</h4>
-                                <p>
-                                    Wind Streng : {{item.windStrength}}
-                                </p>
-                            </div>
-                        </div>
-                        <md-divider ></md-divider>
-                    </div>
-                    <div>
-                      <md-button class="md-primary md-raised" ng-click="showMoreDays($event, item.cityId);">more days</md-button>
-                    </div>
-                </md-list-item>
-            </md-list>
+        <section>
+            <div ng-show="phase==='init'">
+              <p >
+                game
+              </p>
+              <p >
+                loading game...
+              </p>
+            </div>
+            <div ng-show="phase==='game'">
+              <div class="row">
+              <div  layout="row" layout-align="center center" ng-repeat="item in bees" ng-class="item.type">
+               <div class="bee">
+               <p><strong>{{item.type}}<strong> ({{item.lifespan}}/{{item.maxlifespan}})</p>
+              </div>
+              </div>
+              <div class="row" ng-show="phase==='game'">
+                <md-button class="md-primary md-raised" ng-click="ramdomHit();">generate hit</md-button>
+              </div>
         </section>
     </md-content>
 </div>

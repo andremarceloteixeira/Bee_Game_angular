@@ -1,5 +1,5 @@
 
-appTesting.directive("loading", ["$http", function ($http) {
+beeGame.directive("loading", ["$http", function ($http) {
         return {
             restrict: "A",
             link: function (scope, element, attrs) {
